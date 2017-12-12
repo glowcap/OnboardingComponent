@@ -8,11 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		76615B031FDE4ACE004AE786 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76615B021FDE4ACE004AE786 /* AppDelegate.swift */; };
-		76615B051FDE4ACE004AE786 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76615B041FDE4ACE004AE786 /* ViewController.swift */; };
-		76615B081FDE4ACE004AE786 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76615B061FDE4ACE004AE786 /* Main.storyboard */; };
+		76615B051FDE4ACE004AE786 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76615B041FDE4ACE004AE786 /* OnboardingViewController.swift */; };
 		76615B0A1FDE4ACE004AE786 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76615B091FDE4ACE004AE786 /* Assets.xcassets */; };
 		76615B0D1FDE4ACE004AE786 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76615B0B1FDE4ACE004AE786 /* LaunchScreen.storyboard */; };
-		76615B181FDE4ACE004AE786 /* OnboardingTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76615B171FDE4ACE004AE786 /* OnboardingTestTests.swift */; };
+		76615B2B1FDE5120004AE786 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76615B251FDE5120004AE786 /* SnapKit.framework */; };
+		76615B2D1FDE5120004AE786 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76615B271FDE5120004AE786 /* RxCocoa.framework */; };
+		76615B301FDE5120004AE786 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76615B2A1FDE5120004AE786 /* RxSwift.framework */; };
+		76615B321FDE55EB004AE786 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76615B291FDE5120004AE786 /* RxTest.framework */; };
+		76615B331FDE55F0004AE786 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76615B231FDE5114004AE786 /* Nimble.framework */; };
+		76615B341FDE55F4004AE786 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76615B281FDE5120004AE786 /* RxBlocking.framework */; };
+		76615B351FDE55FE004AE786 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76615B261FDE5120004AE786 /* Quick.framework */; };
+		76615B371FDE5670004AE786 /* OnboardingTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76615B361FDE5670004AE786 /* OnboardingTestTests.swift */; };
+		76F50E2E1FDE5CF9003F99BE /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F50E2D1FDE5CF9003F99BE /* OnboardingPageViewController.swift */; };
+		76F50E301FDE5E6E003F99BE /* OnboardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F50E2F1FDE5E6E003F99BE /* OnboardingContentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +36,22 @@
 /* Begin PBXFileReference section */
 		76615AFF1FDE4ACE004AE786 /* OnboardingTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnboardingTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76615B021FDE4ACE004AE786 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		76615B041FDE4ACE004AE786 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		76615B071FDE4ACE004AE786 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		76615B041FDE4ACE004AE786 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		76615B091FDE4ACE004AE786 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76615B0C1FDE4ACE004AE786 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76615B0E1FDE4ACE004AE786 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76615B131FDE4ACE004AE786 /* OnboardingTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnboardingTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		76615B171FDE4ACE004AE786 /* OnboardingTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTestTests.swift; sourceTree = "<group>"; };
 		76615B191FDE4ACE004AE786 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76615B231FDE5114004AE786 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		76615B251FDE5120004AE786 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		76615B261FDE5120004AE786 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		76615B271FDE5120004AE786 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		76615B281FDE5120004AE786 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		76615B291FDE5120004AE786 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		76615B2A1FDE5120004AE786 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		76615B361FDE5670004AE786 /* OnboardingTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTestTests.swift; sourceTree = "<group>"; };
+		76F50E2D1FDE5CF9003F99BE /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
+		76F50E2F1FDE5E6E003F99BE /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76615B2B1FDE5120004AE786 /* SnapKit.framework in Frameworks */,
+				76615B2D1FDE5120004AE786 /* RxCocoa.framework in Frameworks */,
+				76615B301FDE5120004AE786 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +69,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76615B351FDE55FE004AE786 /* Quick.framework in Frameworks */,
+				76615B321FDE55EB004AE786 /* RxTest.framework in Frameworks */,
+				76615B331FDE55F0004AE786 /* Nimble.framework in Frameworks */,
+				76615B341FDE55F4004AE786 /* RxBlocking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +85,7 @@
 				76615B011FDE4ACE004AE786 /* OnboardingTest */,
 				76615B161FDE4ACE004AE786 /* OnboardingTestTests */,
 				76615B001FDE4ACE004AE786 /* Products */,
+				76615B221FDE5114004AE786 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,8 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				76615B021FDE4ACE004AE786 /* AppDelegate.swift */,
-				76615B041FDE4ACE004AE786 /* ViewController.swift */,
-				76615B061FDE4ACE004AE786 /* Main.storyboard */,
+				76615B041FDE4ACE004AE786 /* OnboardingViewController.swift */,
+				76F50E2D1FDE5CF9003F99BE /* OnboardingPageViewController.swift */,
+				76F50E2F1FDE5E6E003F99BE /* OnboardingContentViewController.swift */,
 				76615B091FDE4ACE004AE786 /* Assets.xcassets */,
 				76615B0B1FDE4ACE004AE786 /* LaunchScreen.storyboard */,
 				76615B0E1FDE4ACE004AE786 /* Info.plist */,
@@ -90,10 +115,24 @@
 		76615B161FDE4ACE004AE786 /* OnboardingTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				76615B171FDE4ACE004AE786 /* OnboardingTestTests.swift */,
+				76615B361FDE5670004AE786 /* OnboardingTestTests.swift */,
 				76615B191FDE4ACE004AE786 /* Info.plist */,
 			);
 			path = OnboardingTestTests;
+			sourceTree = "<group>";
+		};
+		76615B221FDE5114004AE786 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76615B261FDE5120004AE786 /* Quick.framework */,
+				76615B281FDE5120004AE786 /* RxBlocking.framework */,
+				76615B271FDE5120004AE786 /* RxCocoa.framework */,
+				76615B2A1FDE5120004AE786 /* RxSwift.framework */,
+				76615B291FDE5120004AE786 /* RxTest.framework */,
+				76615B251FDE5120004AE786 /* SnapKit.framework */,
+				76615B231FDE5114004AE786 /* Nimble.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,6 +145,7 @@
 				76615AFB1FDE4ACE004AE786 /* Sources */,
 				76615AFC1FDE4ACE004AE786 /* Frameworks */,
 				76615AFD1FDE4ACE004AE786 /* Resources */,
+				76615B311FDE5152004AE786 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -150,6 +190,7 @@
 					};
 					76615B121FDE4ACE004AE786 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 76615AFE1FDE4ACE004AE786;
 					};
@@ -181,7 +222,6 @@
 			files = (
 				76615B0D1FDE4ACE004AE786 /* LaunchScreen.storyboard in Resources */,
 				76615B0A1FDE4ACE004AE786 /* Assets.xcassets in Resources */,
-				76615B081FDE4ACE004AE786 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,12 +234,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		76615B311FDE5152004AE786 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		76615AFB1FDE4ACE004AE786 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76615B051FDE4ACE004AE786 /* ViewController.swift in Sources */,
+				76615B051FDE4ACE004AE786 /* OnboardingViewController.swift in Sources */,
+				76F50E301FDE5E6E003F99BE /* OnboardingContentViewController.swift in Sources */,
+				76F50E2E1FDE5CF9003F99BE /* OnboardingPageViewController.swift in Sources */,
 				76615B031FDE4ACE004AE786 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,7 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76615B181FDE4ACE004AE786 /* OnboardingTestTests.swift in Sources */,
+				76615B371FDE5670004AE786 /* OnboardingTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,14 +288,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		76615B061FDE4ACE004AE786 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				76615B071FDE4ACE004AE786 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		76615B0B1FDE4ACE004AE786 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -290,7 +347,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -341,7 +398,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -354,6 +411,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OnboardingTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DaymeinGregorio.OnboardingTest;
@@ -368,6 +429,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OnboardingTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DaymeinGregorio.OnboardingTest;
@@ -382,11 +447,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OnboardingTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DaymeinGregorio.OnboardingTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OnboardingTest.app/OnboardingTest";
@@ -398,7 +469,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OnboardingTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DaymeinGregorio.OnboardingTestTests;
