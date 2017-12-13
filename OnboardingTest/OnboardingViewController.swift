@@ -9,17 +9,10 @@
 import UIKit
 import SnapKit
 
-class OnboardingViewController: UIViewController {
+final class OnboardingViewController: OSViewController {
   
-  let button: UIButton = {
-    let btn = UIButton()
-    btn.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
-    btn.layer.cornerRadius = 3
-    btn.clipsToBounds = true
-    btn.setTitleColor(.white, for: .normal)
-    btn.setTitle("Tap Me", for: .normal)
-    return btn
-  }()
+  lazy var signUpButton = SignUpButton()
+  lazy var loginButton  = LoginButton()
   
   var pageViewController: OnboardingPageViewController = {
     let pVC = OnboardingPageViewController(transitionStyle: .scroll,
@@ -28,41 +21,39 @@ class OnboardingViewController: UIViewController {
     return pVC
   }()
   
-  let model1 = OnboardingContentModel(image: #imageLiteral(resourceName: "Onboard01"), text: "Onboarding message one")
-  let model2 = OnboardingContentModel(image: #imageLiteral(resourceName: "Onboard02"), text: "Onboarding message two")
-  let model3 = OnboardingContentModel(image: #imageLiteral(resourceName: "Onboard01"), text: "Onboarding message three")
+  lazy var pageControl = OnboardingPageControl()
   
-  lazy var pages = [
-    OnboardingContentViewController(model: self.model1),
-    OnboardingContentViewController(model: self.model2),
-    OnboardingContentViewController(model: self.model3)
-  ]
+  var models: [OnboardingContentModel]!
+  var dataSource = OnboardingDataSource()
+  
+  convenience init(models: [OnboardingContentModel]) {
+    self.init()
+    self.models = models
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .white
     
-    pageViewController.dataSource = self
-    
+    let pages = models.flatMap { OnboardingContentViewController(model: $0) }
+    dataSource.pages = pages
+    pageViewController.dataSource = dataSource
     pageViewController.setViewControllers([pages[0]], direction: .forward, animated: true, completion: nil)
-    
     setupViews()
-  }
-
-
-  func setupViews() {
-    setupButton()
-    setupPageViewController()
+    
+    bindingRx()
+    _ = loginButton
   }
   
-  func setupButton() {
-    view.addSubview(button)
-    button.snp.makeConstraints { make in
-      make.bottom.equalTo(view.snp.bottom).offset(-40)
-      make.centerX.equalTo(view.snp.centerX)
-      make.width.equalTo(200)
-      make.height.equalTo(44)
-    }
+//  func OnboardingPageControl() -> Component<OnboardingPageControl> {
+//    return Component<OnboardingPageControl>()
+//      .initialize {
+//
+//    }
+//  }
+
+  func setupViews() {
+    setupPageViewController()
   }
   
   func setupPageViewController() {
@@ -76,27 +67,32 @@ class OnboardingViewController: UIViewController {
       make.bottom.equalTo(view.snp.bottom).offset(-100)
     }
   }
+  
+  override func bindingRx() {
+    super.bindingRx()
+    
+    signUpButton.item
+    .rx.tap
+    .subscribe(onNext: { [unowned self] in
+      let signUpVC = SignUpViewController()
+      self.present(signUpVC, animated: true)
+    }).disposed(by: rx.disposeBag)
+    
+    loginButton.item
+    .rx.tap
+    .subscribe(onNext: { [unowned self] in
+      let logInVC = LogInViewController()
+      self.present(logInVC, animated: true)
+    }).disposed(by: rx.disposeBag)
+  }
 
 }
 
-extension OnboardingViewController: UIPageViewControllerDataSource {
-  
-  func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-    guard let index = pages.index(of: viewController as! OnboardingContentViewController),
-      index > 0
-      else { return nil }
-    return pages[index - 1]
-  }
-  
-  func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-    guard let index = pages.index(of: viewController as! OnboardingContentViewController),
-      index < pages.count - 1
-      else { return nil }
-    return pages[index + 1]
-  }
+extension OnboardingPageViewController: UIPageViewControllerDelegate {
   
   func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
     // update pagination
+    print("Did Finish Animating")
   }
   
 }

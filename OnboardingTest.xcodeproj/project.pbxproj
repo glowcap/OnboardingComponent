@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76505F361FE0C64300E39B33 /* OnboardingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76505F351FE0C64300E39B33 /* OnboardingDataSource.swift */; };
 		76615B031FDE4ACE004AE786 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76615B021FDE4ACE004AE786 /* AppDelegate.swift */; };
 		76615B051FDE4ACE004AE786 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76615B041FDE4ACE004AE786 /* OnboardingViewController.swift */; };
 		76615B0A1FDE4ACE004AE786 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76615B091FDE4ACE004AE786 /* Assets.xcassets */; };
@@ -21,6 +22,13 @@
 		76615B371FDE5670004AE786 /* OnboardingTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76615B361FDE5670004AE786 /* OnboardingTestTests.swift */; };
 		76F50E2E1FDE5CF9003F99BE /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F50E2D1FDE5CF9003F99BE /* OnboardingPageViewController.swift */; };
 		76F50E301FDE5E6E003F99BE /* OnboardingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F50E2F1FDE5E6E003F99BE /* OnboardingContentViewController.swift */; };
+		76F50E321FDFA2EC003F99BE /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F50E311FDFA2EC003F99BE /* Component.swift */; };
+		76F50E351FDFA4A3003F99BE /* OSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F50E341FDFA4A3003F99BE /* OSViewController.swift */; };
+		76F50E371FDFA6EB003F99BE /* NSObject_Rx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F50E361FDFA6EA003F99BE /* NSObject_Rx.framework */; };
+		76F50E391FDFB7AD003F99BE /* OnboardingPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F50E381FDFB7AD003F99BE /* OnboardingPageControl.swift */; };
+		76F50E3B1FE0BAB7003F99BE /* OnboardingViewController+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F50E3A1FE0BAB7003F99BE /* OnboardingViewController+Helper.swift */; };
+		76F6FE031FE0E15D001BAFD3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F6FE021FE0E15D001BAFD3 /* SignUpViewController.swift */; };
+		76F6FE051FE0EC2C001BAFD3 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F6FE041FE0EC2C001BAFD3 /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76505F351FE0C64300E39B33 /* OnboardingDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDataSource.swift; sourceTree = "<group>"; };
 		76615AFF1FDE4ACE004AE786 /* OnboardingTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnboardingTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76615B021FDE4ACE004AE786 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76615B041FDE4ACE004AE786 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +61,13 @@
 		76615B361FDE5670004AE786 /* OnboardingTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTestTests.swift; sourceTree = "<group>"; };
 		76F50E2D1FDE5CF9003F99BE /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		76F50E2F1FDE5E6E003F99BE /* OnboardingContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentViewController.swift; sourceTree = "<group>"; };
+		76F50E311FDFA2EC003F99BE /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
+		76F50E341FDFA4A3003F99BE /* OSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSViewController.swift; sourceTree = "<group>"; };
+		76F50E361FDFA6EA003F99BE /* NSObject_Rx.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NSObject_Rx.framework; path = Carthage/Build/iOS/NSObject_Rx.framework; sourceTree = "<group>"; };
+		76F50E381FDFB7AD003F99BE /* OnboardingPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageControl.swift; sourceTree = "<group>"; };
+		76F50E3A1FE0BAB7003F99BE /* OnboardingViewController+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingViewController+Helper.swift"; sourceTree = "<group>"; };
+		76F6FE021FE0E15D001BAFD3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		76F6FE041FE0EC2C001BAFD3 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +78,7 @@
 				76615B2B1FDE5120004AE786 /* SnapKit.framework in Frameworks */,
 				76615B2D1FDE5120004AE786 /* RxCocoa.framework in Frameworks */,
 				76615B301FDE5120004AE786 /* RxSwift.framework in Frameworks */,
+				76F50E371FDFA6EB003F99BE /* NSObject_Rx.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,8 +120,14 @@
 			children = (
 				76615B021FDE4ACE004AE786 /* AppDelegate.swift */,
 				76615B041FDE4ACE004AE786 /* OnboardingViewController.swift */,
+				76F50E3A1FE0BAB7003F99BE /* OnboardingViewController+Helper.swift */,
+				76505F351FE0C64300E39B33 /* OnboardingDataSource.swift */,
 				76F50E2D1FDE5CF9003F99BE /* OnboardingPageViewController.swift */,
 				76F50E2F1FDE5E6E003F99BE /* OnboardingContentViewController.swift */,
+				76F50E381FDFB7AD003F99BE /* OnboardingPageControl.swift */,
+				76F6FE021FE0E15D001BAFD3 /* SignUpViewController.swift */,
+				76F6FE041FE0EC2C001BAFD3 /* LogInViewController.swift */,
+				76F50E331FDFA48B003F99BE /* Shared */,
 				76615B091FDE4ACE004AE786 /* Assets.xcassets */,
 				76615B0B1FDE4ACE004AE786 /* LaunchScreen.storyboard */,
 				76615B0E1FDE4ACE004AE786 /* Info.plist */,
@@ -124,6 +147,7 @@
 		76615B221FDE5114004AE786 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				76F50E361FDFA6EA003F99BE /* NSObject_Rx.framework */,
 				76615B261FDE5120004AE786 /* Quick.framework */,
 				76615B281FDE5120004AE786 /* RxBlocking.framework */,
 				76615B271FDE5120004AE786 /* RxCocoa.framework */,
@@ -133,6 +157,15 @@
 				76615B231FDE5114004AE786 /* Nimble.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		76F50E331FDFA48B003F99BE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				76F50E311FDFA2EC003F99BE /* Component.swift */,
+				76F50E341FDFA4A3003F99BE /* OSViewController.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,12 +277,14 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/NSObject_Rx.framework",
 			);
 			name = Carthage;
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
+				"$(BUILT_PRODUCTS_DIR)$(FRAMEWORKS_FOLDER_PATH)/NSObject_Rx.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -264,8 +299,15 @@
 			files = (
 				76615B051FDE4ACE004AE786 /* OnboardingViewController.swift in Sources */,
 				76F50E301FDE5E6E003F99BE /* OnboardingContentViewController.swift in Sources */,
+				76F6FE051FE0EC2C001BAFD3 /* LogInViewController.swift in Sources */,
+				76F50E351FDFA4A3003F99BE /* OSViewController.swift in Sources */,
 				76F50E2E1FDE5CF9003F99BE /* OnboardingPageViewController.swift in Sources */,
+				76F6FE031FE0E15D001BAFD3 /* SignUpViewController.swift in Sources */,
 				76615B031FDE4ACE004AE786 /* AppDelegate.swift in Sources */,
+				76F50E3B1FE0BAB7003F99BE /* OnboardingViewController+Helper.swift in Sources */,
+				76505F361FE0C64300E39B33 /* OnboardingDataSource.swift in Sources */,
+				76F50E391FDFB7AD003F99BE /* OnboardingPageControl.swift in Sources */,
+				76F50E321FDFA2EC003F99BE /* Component.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

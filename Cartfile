@@ -3,3 +3,4 @@ github "ReactiveX/RxSwift" ~> 4.0
 github "Quick/Quick"
 github "Quick/Nimble"
 github "SnapKit/SnapKit" ~> 4.0.0
+github "RxSwiftCommunity/NSObject-Rx"

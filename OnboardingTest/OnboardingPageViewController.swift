@@ -18,7 +18,3 @@ class OnboardingPageViewController: UIPageViewController {
   }
 
 }
-
-extension OnboardingPageViewController: UIPageViewControllerDelegate {
-  
-}
