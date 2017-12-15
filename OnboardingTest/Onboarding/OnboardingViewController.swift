@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import SnapKit
 
 enum UserPath: Equatable {
   case professional
@@ -23,6 +22,7 @@ func == (lhs: UserPath, rhs: UserPath) -> Bool {
   }
 }
 
+// this can be set anywhere in the project, even pulled from an API call and parsed.
 let professionalOnboardingModels = [
   OnboardingContentModel(index: 0, image: #imageLiteral(resourceName: "Onboard1"), text: "Pro Onboarding message one. This message is to welcome the user to the onboarding process. It may take a few lines to do so."),
   OnboardingContentModel(index: 1, image: #imageLiteral(resourceName: "Onboard2"), text: "Pro Onboarding message two. Here is where users find out some of the benefits of the application."),
