@@ -24,18 +24,18 @@ func == (lhs: UserPath, rhs: UserPath) -> Bool {
 }
 
 let professionalOnboardingModels = [
-  OnboardingContentModel(image: #imageLiteral(resourceName: "Onboard1"), text: "Pro Onboarding message one. This message is to welcome the user to the onboarding process. It may take a few lines to do so."),
-  OnboardingContentModel(image: #imageLiteral(resourceName: "Onboard2"), text: "Pro Onboarding message two. Here is where users find out some of the benefits of the application."),
-  OnboardingContentModel(image: #imageLiteral(resourceName: "Onboard3"), text: "Pro Onboarding message three. The final screen is some kind of push to get the user started with the application."),
-  OnboardingContentModel(image: #imageLiteral(resourceName: "Onboard1"), text: "Pro Onboarding message one. This message is to welcome the user to the onboarding process. It may take a few lines to do so."),
-  OnboardingContentModel(image: #imageLiteral(resourceName: "Onboard2"), text: "Pro Onboarding message two. Here is where users find out some of the benefits of the application."),
-  OnboardingContentModel(image: #imageLiteral(resourceName: "Onboard3"), text: "Pro Onboarding message three. The final screen is some kind of push to get the user started with the application.")
+  OnboardingContentModel(index: 0, image: #imageLiteral(resourceName: "Onboard1"), text: "Pro Onboarding message one. This message is to welcome the user to the onboarding process. It may take a few lines to do so."),
+  OnboardingContentModel(index: 1, image: #imageLiteral(resourceName: "Onboard2"), text: "Pro Onboarding message two. Here is where users find out some of the benefits of the application."),
+  OnboardingContentModel(index: 2, image: #imageLiteral(resourceName: "Onboard3"), text: "Pro Onboarding message three. The final screen is some kind of push to get the user started with the application."),
+  OnboardingContentModel(index: 3, image: #imageLiteral(resourceName: "Onboard1"), text: "Pro Onboarding message one. This message is to welcome the user to the onboarding process. It may take a few lines to do so."),
+  OnboardingContentModel(index: 4, image: #imageLiteral(resourceName: "Onboard2"), text: "Pro Onboarding message two. Here is where users find out some of the benefits of the application."),
+  OnboardingContentModel(index: 5, image: #imageLiteral(resourceName: "Onboard3"), text: "Pro Onboarding message three. The final screen is some kind of push to get the user started with the application.")
 ]
 
 let studentOnboardingModels = [
-  OnboardingContentModel(image: #imageLiteral(resourceName: "Onboard1"), text: "Student Onboarding message one. This message is to welcome the user to the onboarding process. It may take a few lines to do so."),
-  OnboardingContentModel(image: #imageLiteral(resourceName: "Onboard2"), text: "Studnet Onboarding message two. Here is where users find out some of the benefits of the application."),
-  OnboardingContentModel(image: #imageLiteral(resourceName: "Onboard3"), text: "Student Onboarding message three. The final screen is some kind of push to get the user started with the application.")
+  OnboardingContentModel(index: 0, image: #imageLiteral(resourceName: "Onboard1"), text: "Student Onboarding message one. This message is to welcome the user to the onboarding process. It may take a few lines to do so."),
+  OnboardingContentModel(index: 1, image: #imageLiteral(resourceName: "Onboard2"), text: "Studnet Onboarding message two. Here is where users find out some of the benefits of the application."),
+  OnboardingContentModel(index: 2, image: #imageLiteral(resourceName: "Onboard3"), text: "Student Onboarding message three. The final screen is some kind of push to get the user started with the application.")
 ]
 
 final class OnboardingViewController: OSViewController {
@@ -86,11 +86,10 @@ final class OnboardingViewController: OSViewController {
     bindingRx()
     _ = loginButton
     
-    let pCModel = PageIndicatorModel(size: 14, activeColor: #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1), inactiveColor: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1), image: #imageLiteral(resourceName: "PageIndicatorIcon"))
+    let pCModel = PageIndicatorModel(size: 8, activeColor: #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1), inactiveColor: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
     pageControl = PageControl(model: pCModel, pageCount: pages.count)
-    pageControl.item.currentPage = 0
+    pageControl.item.currentIndex.value = 0
     
-//    pageViewController.presentedViewController.
   }
 
   func setupViews() {
@@ -122,6 +121,7 @@ final class OnboardingViewController: OSViewController {
     .rx.tap
     .subscribe(onNext: { [unowned self] in
       print("skip tapped")
+      // add skip functionality here
     }).disposed(by: rx.disposeBag)
     
     signUpButton.item
@@ -144,9 +144,14 @@ final class OnboardingViewController: OSViewController {
 extension OnboardingViewController: UIPageViewControllerDelegate {
   
   func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-//    print("index: \(dataSource.currentIndex)")
-//    pageControl.item.currentPage = dataSource.currentIndex
+    guard let contentVC = pageViewController.viewControllers?.first as? OnboardingContentViewController else { return }
+    
+    switch (finished, completed) {
+      case (true, true):
+      self.pageControl.item.currentIndex.value = contentVC.index!
+      default:
+        break
+    }
   }
   
 }
-

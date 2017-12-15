@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import RxSwift
 
 struct OnboardingContentModel {
+  let index: Int
   let image: UIImage
   let text: String
 }
@@ -28,8 +30,11 @@ final class OnboardingContentViewController: UIViewController {
     return lbl
   }()
   
+  var index: Int!
+  
   convenience init(model: OnboardingContentModel) {
     self.init()
+    index        = model.index
     image.image  = model.image
     message.text = model.text
   }
