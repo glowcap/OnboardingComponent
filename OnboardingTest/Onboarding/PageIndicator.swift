@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 
+/// This model can be used as a reference if building an API to fetch onboarding
 struct PageIndicatorModel {
   
   var size: CGFloat

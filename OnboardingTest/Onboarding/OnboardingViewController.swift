@@ -8,20 +8,6 @@
 
 import UIKit
 
-enum UserPath: Equatable {
-  case professional
-  case student
-}
-
-func == (lhs: UserPath, rhs: UserPath) -> Bool {
-  switch (lhs, rhs) {
-  case (.professional, .professional), (.student, .student):
-    return true
-  default:
-    return false
-  }
-}
-
 // this can be set anywhere in the project, even pulled from an API call and parsed.
 let professionalOnboardingModels = [
   OnboardingContentModel(index: 0, image: #imageLiteral(resourceName: "Onboard1"), text: "Pro Onboarding message one. This message is to welcome the user to the onboarding process. It may take a few lines to do so."),
@@ -37,6 +23,20 @@ let studentOnboardingModels = [
   OnboardingContentModel(index: 1, image: #imageLiteral(resourceName: "Onboard2"), text: "Studnet Onboarding message two. Here is where users find out some of the benefits of the application."),
   OnboardingContentModel(index: 2, image: #imageLiteral(resourceName: "Onboard3"), text: "Student Onboarding message three. The final screen is some kind of push to get the user started with the application.")
 ]
+
+enum UserPath: Equatable {
+  case professional
+  case student
+}
+
+func == (lhs: UserPath, rhs: UserPath) -> Bool {
+  switch (lhs, rhs) {
+  case (.professional, .professional), (.student, .student):
+    return true
+  default:
+    return false
+  }
+}
 
 final class OnboardingViewController: OSViewController {
   
@@ -76,27 +76,33 @@ final class OnboardingViewController: OSViewController {
     super.viewDidLoad()
     view.backgroundColor = .white
     pageViewController.delegate = self
+    configurePageViewController()
+    setupViews()
+    bindingRx()
     
+    _ = loginButton
+    
+    configurePageController()
+  }
+  
+  private func configurePageViewController() {
     let pages = models.flatMap { OnboardingContentViewController(model: $0) }
     dataSource.pages = pages
     pageViewController.dataSource = dataSource
     pageViewController.setViewControllers([pages[0]], direction: .forward, animated: true, completion: nil)
-    setupViews()
-    
-    bindingRx()
-    _ = loginButton
-    
-    let pCModel = PageIndicatorModel(size: 8, activeColor: #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1), inactiveColor: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
-    pageControl = PageControl(model: pCModel, pageCount: pages.count)
+  }
+  
+  private func configurePageController() {
+    let pCModel = PageIndicatorModel(size: 8, activeColor: #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1), inactiveColor: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1), image: #imageLiteral(resourceName: "PageIndicatorIcon"))
+    pageControl = PageControl(model: pCModel, pageCount: models.count)
     pageControl.item.currentIndex.value = 0
-    
   }
 
-  func setupViews() {
+  private func setupViews() {
     setupPageViewController()
   }
   
-  func setupPageViewController() {
+  private func setupPageViewController() {
     addChildViewController(pageViewController)
     view.addSubview(pageViewController.view)
     pageViewController.didMove(toParentViewController: self)
@@ -120,8 +126,8 @@ final class OnboardingViewController: OSViewController {
     skipButton.item
     .rx.tap
     .subscribe(onNext: { [unowned self] in
-      print("skip tapped")
-      // add skip functionality here
+      let signUpVC = SignUpViewController()
+      self.present(signUpVC, animated: true)
     }).disposed(by: rx.disposeBag)
     
     signUpButton.item
