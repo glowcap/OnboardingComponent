@@ -29,6 +29,9 @@
 		76F50E3B1FE0BAB7003F99BE /* OnboardingViewController+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F50E3A1FE0BAB7003F99BE /* OnboardingViewController+Helper.swift */; };
 		76F6FE031FE0E15D001BAFD3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F6FE021FE0E15D001BAFD3 /* SignUpViewController.swift */; };
 		76F6FE051FE0EC2C001BAFD3 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F6FE041FE0EC2C001BAFD3 /* LogInViewController.swift */; };
+		76F6FE071FE0F78E001BAFD3 /* PathSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F6FE061FE0F78E001BAFD3 /* PathSelectionViewController.swift */; };
+		76F6FE0C1FE20DC7001BAFD3 /* PageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F6FE0B1FE20DC7001BAFD3 /* PageIndicator.swift */; };
+		76F6FE0E1FE242CC001BAFD3 /* OnboardingPageControl+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F6FE0D1FE242CC001BAFD3 /* OnboardingPageControl+Setup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,9 @@
 		76F50E3A1FE0BAB7003F99BE /* OnboardingViewController+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingViewController+Helper.swift"; sourceTree = "<group>"; };
 		76F6FE021FE0E15D001BAFD3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		76F6FE041FE0EC2C001BAFD3 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		76F6FE061FE0F78E001BAFD3 /* PathSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathSelectionViewController.swift; sourceTree = "<group>"; };
+		76F6FE0B1FE20DC7001BAFD3 /* PageIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageIndicator.swift; sourceTree = "<group>"; };
+		76F6FE0D1FE242CC001BAFD3 /* OnboardingPageControl+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingPageControl+Setup.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,12 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				76615B021FDE4ACE004AE786 /* AppDelegate.swift */,
-				76615B041FDE4ACE004AE786 /* OnboardingViewController.swift */,
-				76F50E3A1FE0BAB7003F99BE /* OnboardingViewController+Helper.swift */,
-				76505F351FE0C64300E39B33 /* OnboardingDataSource.swift */,
-				76F50E2D1FDE5CF9003F99BE /* OnboardingPageViewController.swift */,
-				76F50E2F1FDE5E6E003F99BE /* OnboardingContentViewController.swift */,
-				76F50E381FDFB7AD003F99BE /* OnboardingPageControl.swift */,
+				76F6FE061FE0F78E001BAFD3 /* PathSelectionViewController.swift */,
+				76F6FE081FE1013D001BAFD3 /* Onboarding */,
 				76F6FE021FE0E15D001BAFD3 /* SignUpViewController.swift */,
 				76F6FE041FE0EC2C001BAFD3 /* LogInViewController.swift */,
 				76F50E331FDFA48B003F99BE /* Shared */,
@@ -166,6 +168,21 @@
 				76F50E341FDFA4A3003F99BE /* OSViewController.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		76F6FE081FE1013D001BAFD3 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				76615B041FDE4ACE004AE786 /* OnboardingViewController.swift */,
+				76F50E3A1FE0BAB7003F99BE /* OnboardingViewController+Helper.swift */,
+				76505F351FE0C64300E39B33 /* OnboardingDataSource.swift */,
+				76F50E2D1FDE5CF9003F99BE /* OnboardingPageViewController.swift */,
+				76F50E2F1FDE5E6E003F99BE /* OnboardingContentViewController.swift */,
+				76F50E381FDFB7AD003F99BE /* OnboardingPageControl.swift */,
+				76F6FE0D1FE242CC001BAFD3 /* OnboardingPageControl+Setup.swift */,
+				76F6FE0B1FE20DC7001BAFD3 /* PageIndicator.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,15 +315,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				76615B051FDE4ACE004AE786 /* OnboardingViewController.swift in Sources */,
+				76F6FE0E1FE242CC001BAFD3 /* OnboardingPageControl+Setup.swift in Sources */,
 				76F50E301FDE5E6E003F99BE /* OnboardingContentViewController.swift in Sources */,
 				76F6FE051FE0EC2C001BAFD3 /* LogInViewController.swift in Sources */,
 				76F50E351FDFA4A3003F99BE /* OSViewController.swift in Sources */,
+				76F6FE0C1FE20DC7001BAFD3 /* PageIndicator.swift in Sources */,
 				76F50E2E1FDE5CF9003F99BE /* OnboardingPageViewController.swift in Sources */,
 				76F6FE031FE0E15D001BAFD3 /* SignUpViewController.swift in Sources */,
 				76615B031FDE4ACE004AE786 /* AppDelegate.swift in Sources */,
 				76F50E3B1FE0BAB7003F99BE /* OnboardingViewController+Helper.swift in Sources */,
 				76505F361FE0C64300E39B33 /* OnboardingDataSource.swift in Sources */,
 				76F50E391FDFB7AD003F99BE /* OnboardingPageControl.swift in Sources */,
+				76F6FE071FE0F78E001BAFD3 /* PathSelectionViewController.swift in Sources */,
 				76F50E321FDFA2EC003F99BE /* Component.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
