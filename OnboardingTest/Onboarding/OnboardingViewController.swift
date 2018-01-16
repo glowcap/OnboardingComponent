@@ -93,7 +93,7 @@ final class OnboardingViewController: OSViewController {
   }
   
   private func configurePageController() {
-    let pCModel = PageIndicatorModel(size: 8, activeColor: #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1), inactiveColor: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1), image: #imageLiteral(resourceName: "PageIndicatorIcon"))
+    let pCModel = PageIndicatorModel(size: 16, activeColor: #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1), inactiveColor: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1), image: #imageLiteral(resourceName: "PageIndicatorIcon"))
     pageControl = PageControl(model: pCModel, pageCount: models.count)
     pageControl.item.currentIndex.value = 0
   }
